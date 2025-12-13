@@ -1,7 +1,7 @@
 # CampusSphere
 This is gawa gawa ko lang and trying to make the campus sphere
 # The other repositories is:
-https://github.com/Exodus102/CampusSphere_student.git
+https://github.com/Exodus102/CampusSphere_admin.git
 # Importang reminders when getting this repo:
 Run composer install on the repositories you made e.g  
 cd root/CampusSpehere_admin  
