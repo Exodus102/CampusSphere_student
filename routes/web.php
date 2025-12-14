@@ -8,3 +8,6 @@ Route::get('/', function () {
 Route::get('/forgot-password', function () {
     return view('login.forgot_password');
 })->name('password.request');
+Route::get('/first-time-login', function () {
+    return view('login.first_time_login');
+})->name('login.first_time');

@@ -331,7 +331,7 @@ forgot password */
     position: absolute;
     top: 20px;
     right: 20px;
-    max-width: 150px; 
+    max-width: 120px; 
 }
 
 .form-logo img {
@@ -359,5 +359,15 @@ forgot password */
         min-height: 100vh;
         padding: 40px 20px;
     }
+}
+
+
+/* First time login */
+.helper-text {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #6b7280; 
+    line-height: 1.4;
 }
 
