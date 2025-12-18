@@ -10,7 +10,7 @@ class StudentLoginController extends Controller
 {
     public function showLogin()
     {
-        return view('login.login_stud'); // your login blade
+        return view('login.login_stud'); 
     }
 
     public function login(Request $request)
@@ -34,10 +34,10 @@ class StudentLoginController extends Controller
             return back()->with('error', 'Account not activated. Please check your email for credentials.');
         }
 
-        // Log the student in (session-based)
+       
         session(['student_id' => $student->id, 'student_number' => $student->student_number]);
 
-        return redirect()->route('student.home'); // redirect to student home page
+        return redirect()->route('student.home'); 
     }
 
     public function logout(Request $request)

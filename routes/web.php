@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstTimeLoginController;
 use App\Http\Controllers\StudentLoginController;
 
+use App\Http\Controllers\ForgotPasswordController;
+
 Route::get('/', function () {
     return view('login.login_stud');
 })->name('login.login_stud');
@@ -15,6 +17,9 @@ Route::get('/first-time-login', function () {
 })->name('login.first_time');
 
 
+
+Route::get('/forgot-password', [ForgotPasswordController::class, 'showForm'])->name('password.request');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'submit'])->name('forgot-password.submit');
 
 Route::get('/login', [StudentLoginController::class, 'showLogin'])->name('login.show');
 Route::post('/login', [StudentLoginController::class, 'login'])->name('login.submit');
