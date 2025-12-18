@@ -26,7 +26,7 @@
             <p>Enter your credentials to continue.</p>
         </div>
 
-        <form method="POST" action="">
+        <form method="POST" action="{{ route('login.submit') }}">
             @csrf
 
             <div class="input-group">
