@@ -9,12 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Student Login</title>
 
 
 </head>
 
 <body>
+    @if(session('password_updated'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                iconColor: '#b0c4de',
+                title: 'Password Updated',
+                text: 'You may now log in using your new password.',
+                confirmButtonColor: '#002D62'
+            });
+        </script>
+    @endif
+
+
     <div class="login-container">
         <div class="logo-area">
             <img src="{{ asset('images/campus_logo.png') }}" alt="CampusSphere Logo" class="logo-img">
@@ -102,6 +116,7 @@
     </div>
 
     <script src="{{ asset('js/login.js') }}"></script>
+
 
 </body>
 

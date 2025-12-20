@@ -20,6 +20,14 @@ Route::get('/first-time-login', function () {
 
 Route::get('/forgot-password', [ForgotPasswordController::class, 'showForm'])->name('password.request');
 Route::post('/forgot-password', [ForgotPasswordController::class, 'submit'])->name('forgot-password.submit');
+Route::get('/reset-password', function () {
+    return view('login.update_password');
+})->name('password.reset');
+Route::post('/reset-password', [ForgotPasswordController::class, 'update'])
+    ->name('password.update');
+
+
+    
 
 Route::get('/login', [StudentLoginController::class, 'showLogin'])->name('login.show');
 Route::post('/login', [StudentLoginController::class, 'login'])->name('login.submit');
@@ -37,4 +45,4 @@ Route::post('/first-time-login', [FirstTimeLoginController::class, 'submit'])
 
 
 
-    
+

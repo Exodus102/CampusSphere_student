@@ -102,9 +102,11 @@
             @if(session('success'))
                 Swal.fire({
                     icon: 'success',
+                    iconColor: '#b0c4de',
                     title: 'Credentials Sent',
                     html: 'Your login credentials have been sent to your email. <br>Check your inbox to continue.',
-                    confirmButtonColor: '#002D62'
+                    confirmButtonColor: '#002D62',
+                    background: '#F7FAFF'
                 });
             @endif
 
